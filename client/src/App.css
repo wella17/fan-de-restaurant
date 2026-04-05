@@ -1,0 +1,23 @@
+/* Tailwind CSS will handle most styling */
+.App {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom styles for specific elements */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.error {
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
