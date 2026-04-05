@@ -1,7 +1,7 @@
 {
   "name": "fan-de-restaurant-server",
   "version": "1.0.0",
-  "description": "Backend API for Fan de Restaurant",
+  "description": "Backend API for Fan de",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

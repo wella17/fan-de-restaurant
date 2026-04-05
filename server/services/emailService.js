@@ -59,7 +59,7 @@ const sendOrderConfirmation = async (order) => {
 
         <p>We'll begin preparing your order once payment is received. Thank you for choosing Fan de!</p>
 
-        <p>Best regards,<br>Fan de Restaurant Team</p>
+        <p>Best regards,<br>Fan de Team</p>
       `;
     } else {
       emailContent = `
@@ -95,14 +95,14 @@ const sendOrderConfirmation = async (order) => {
 
         <p>We're preparing your order and will have it ready for you soon!</p>
 
-        <p>Best regards,<br>Fan de Restaurant Team</p>
+        <p>Best regards,<br>Fan de Team</p>
       `;
     }
 
     const mailOptions = {
       from: process.env.EMAIL_FROM,
       to: order.customerInfo.email,
-      subject: `Order Confirmation #${order.orderNumber} - Fan de Restaurant`,
+      subject: `Order Confirmation #${order.orderNumber} - Fan de`,
       html: emailContent
     };
 
@@ -164,7 +164,7 @@ const sendOrderStatusUpdate = async (order, newStatus) => {
     const mailOptions = {
       from: process.env.EMAIL_FROM,
       to: order.customerInfo.email,
-      subject: `Order Update #${order.orderNumber} - Fan de Restaurant`,
+      subject: `Order Update #${order.orderNumber} - Fan de`,
       html: emailContent
     };
 

@@ -53,7 +53,7 @@ app.use('/api/delivery', deliveryRoutes);
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'OK',
-    message: 'Fan de Restaurant API is running',
+    message: 'Fan de API is running',
     timestamp: new Date().toISOString()
   });
 });

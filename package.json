@@ -1,7 +1,7 @@
 {
   "name": "fan-de-restaurant",
   "version": "1.0.0",
-  "description": "Fan de Restaurant Online Ordering System",
+  "description": "Fan de Online Ordering System",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "client": "cd client && npm start",

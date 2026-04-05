@@ -1,4 +1,4 @@
-# Fan de Restaurant - Online Ordering System
+# Fan de - Online Ordering System
 
 A complete online ordering system for a Filipino pastry restaurant with pickup and delivery options.
 
