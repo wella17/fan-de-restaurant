@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fan-de-restaurant.vercel.app/sitemap.xml
