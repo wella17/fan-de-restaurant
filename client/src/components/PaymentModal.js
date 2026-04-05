@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import {
   Elements,
@@ -17,11 +17,7 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
   const [error, setError] = useState('');
   const [clientSecret, setClientSecret] = useState('');
 
-  useEffect(() => {
-    createPaymentIntent();
-  }, [amount]);
-
-  const createPaymentIntent = async () => {
+  const createPaymentIntent = useCallback(async () => {
     try {
       const response = await paymentsAPI.createStripePaymentIntent(amount * 100); // Convert to cents
       setClientSecret(response.data.clientSecret);
@@ -29,7 +25,11 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
       console.error('Error creating payment intent:', error);
       setError('Failed to initialize payment. Please try again.');
     }
-  };
+  }, [amount]);
+
+  useEffect(() => {
+    createPaymentIntent();
+  }, [createPaymentIntent]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
