@@ -306,8 +306,10 @@ export default function FanDeOrderingSite() {
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-              Modern bakery ordering with soft red and white branding, mobile-friendly layout,
-              and a clean pickup flow with limited delivery available for nearby areas.
+              Enjoy a seamless pickup and online ordering experience. At Fan de, every baked creation is
+              inspired by authentic Philippine flavors—thoughtfully crafted with a modern twist to elevate
+              every bite. Missing the taste of home? Let Fan de bring those familiar, comforting flavors back
+              to you one delicious bite at a time.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
