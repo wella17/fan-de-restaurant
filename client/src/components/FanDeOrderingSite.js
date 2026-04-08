@@ -37,7 +37,7 @@ export default function FanDeOrderingSite() {
       id: 4,
       name: "Hopia Assortment",
       price: 18,
-      description: "A variety pack of our different hopia flavors - mung bean, ube, and pineapple. Perfect for sharing.",
+      description: "A variety pack of our different hopia flavors - mung bean, ube, and pork (Porkiedot). Perfect for sharing.",
       tag: "Variety Pack",
       image: hopiaAssortmentImage,
     },
