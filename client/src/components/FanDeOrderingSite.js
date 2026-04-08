@@ -3,48 +3,43 @@ import { ordersAPI, deliveryAPI } from '../services/api';
 import PaymentModal from './PaymentModal';
 
 export default function FanDeOrderingSite() {
-  const featuredImage =
-    "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAgAA4QDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD8i6KKK+IP3EKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//Z";
-
-  const productImage1 =
-    "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80";
-  const productImage2 =
-    "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1200&q=80";
-  const productImage3 =
-    "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=1200&q=80";
+  const empandaImage = "/images/empanda.png";
+  const hopiaImage = "/images/Hopia.png";
+  const pandesalImage = "/images/pandesal.png";
+  const hopiaAssortmentImage = "/images/Hopia Assorment.png";
 
   const products = [
     {
       id: 1,
-      name: "Empanda Box",
+      name: "Empanada",
       price: 12,
-      description: "Golden, glossy empanda with an ad-ready baked finish.",
+      description: "Traditional Filipino empanada with savory filling, golden and crispy. Made with authentic Philippine flavors.",
       tag: "Best Seller",
-      image: featuredImage,
+      image: empandaImage,
     },
     {
       id: 2,
-      name: "Fresh Tray Pack",
-      price: 15,
-      description: "A bakery tray perfect for sharing with family and friends.",
-      tag: "Family Favorite",
-      image: productImage1,
+      name: "Hopia",
+      price: 8,
+      description: "Classic Filipino pastry with sweet mung bean filling. A beloved traditional treat with modern twist.",
+      tag: "Traditional",
+      image: hopiaImage,
     },
     {
       id: 3,
-      name: "Sweet Veggie Hopia",
-      price: 10,
-      description: "Soft pastry packed fresh and ready for pickup.",
-      tag: "Signature",
-      image: productImage3,
+      name: "Pandesal",
+      price: 6,
+      description: "The iconic Filipino bread roll, soft and slightly sweet. Perfect for breakfast or any time of day.",
+      tag: "Filipino Classic",
+      image: pandesalImage,
     },
     {
       id: 4,
-      name: "Baked Pastry Bundle",
+      name: "Hopia Assortment",
       price: 18,
-      description: "A warm bakery bundle for gifting or group orders.",
-      tag: "Bundle Deal",
-      image: productImage2,
+      description: "A variety pack of our different hopia flavors - mung bean, ube, and pineapple. Perfect for sharing.",
+      tag: "Variety Pack",
+      image: hopiaAssortmentImage,
     },
   ];
 
@@ -347,8 +342,8 @@ export default function FanDeOrderingSite() {
             <div className="overflow-hidden rounded-[2rem] bg-white/95 p-4 shadow-2xl ring-1 ring-red-200">
               <div className="relative overflow-hidden rounded-[1.5rem]">
                 <img
-                  src={featuredImage}
-                  alt="Featured empanda"
+                  src={empandaImage}
+                  alt="Featured empanada"
                   className="h-[420px] w-full object-cover"
                 />
                 <div className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-red-600 shadow">
