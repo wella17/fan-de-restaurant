@@ -274,7 +274,6 @@ export default function FanDeOrderingSite() {
             />
             <div>
               <div className="text-lg font-bold tracking-wide text-slate-900">Fandekitchen</div>
-              <div className="text-xs font-medium text-orange-500">FanDe Anndy 25 L.L.C.</div>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
@@ -823,7 +822,6 @@ export default function FanDeOrderingSite() {
                 />
                 <div>
                   <div className="text-lg font-bold">Fandekitchen</div>
-                  <div className="text-sm text-orange-400">FanDe Anndy 25 L.L.C.</div>
                 </div>
               </div>
               <p className="mt-3 text-sm text-slate-400">
@@ -846,7 +844,7 @@ export default function FanDeOrderingSite() {
             </div>
           </div>
           <div className="mt-8 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
-            © {new Date().getFullYear()} FanDe Anndy 25 L.L.C. dba Fandekitchen. All rights reserved.
+            © {new Date().getFullYear()} Fandekitchen. All rights reserved.
           </div>
         </div>
       </footer>
