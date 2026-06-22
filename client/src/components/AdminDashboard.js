@@ -85,7 +85,7 @@ const AdminDashboard = () => {
       <header className="bg-white shadow">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-gray-900">Fan de Admin Dashboard</h1>
+            <h1 className="text-3xl font-bold text-gray-900">Fandekitchen Admin Dashboard</h1>
             <a
               href="/"
               className="rounded-2xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700"

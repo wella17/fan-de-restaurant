@@ -255,7 +255,7 @@ export default function FanDeOrderingSite() {
   const total = subtotal + deliveryFee;
 
   const pickupSteps = [
-    "Choose your favorite Fan de pastries",
+    "Choose your favorite Fandekitchen pastries",
     "Add items to your cart",
     "Select pickup or delivery",
     "Pay online and enjoy fresh pastries",
@@ -267,8 +267,8 @@ export default function FanDeOrderingSite() {
       <header className="sticky top-0 z-30 border-b border-red-100 bg-red-100/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
           <div>
-            <div className="text-lg font-bold tracking-wide text-slate-900">Fan de</div>
-            <div className="text-xs font-medium text-red-600">Feel Ko To</div>
+            <div className="text-lg font-bold tracking-wide text-slate-900">Fandekitchen</div>
+            <div className="text-xs font-medium text-red-600">Fan De Anndy 25 L.L.C.</div>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
             <a href="#menu" className="hover:text-red-600">Menu</a>
@@ -295,15 +295,15 @@ export default function FanDeOrderingSite() {
               Freshly baked • Pickup & Limited Delivery (nearby areas only)
             </span>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
-              Fan de
+              Fandekitchen
               <span className="block text-lg font-medium text-red-600 md:text-xl">
-                Feel Ko To
+                Fan De Liciou$
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-              Enjoy a seamless pickup and online ordering experience. At Fan de, every baked creation is
+              Enjoy a seamless pickup and online ordering experience. At Fandekitchen, every baked creation is
               inspired by authentic Philippine flavors—thoughtfully crafted with a modern twist to elevate
-              every bite. Missing the taste of home? Let Fan de bring those familiar, comforting flavors back
+              every bite. Missing the taste of home? Let Fandekitchen bring those familiar, comforting flavors back
               to you one delicious bite at a time.
             </p>
 
@@ -781,7 +781,7 @@ export default function FanDeOrderingSite() {
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-300">
-                Fan de • Feel Ko To
+                Fandekitchen • Fan De Liciou$
               </p>
               <h2 className="mt-2 text-3xl font-bold">Fresh pastries worth sharing</h2>
               <p className="mt-4 max-w-xl text-slate-300">
@@ -802,6 +802,38 @@ export default function FanDeOrderingSite() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white mt-8">
+        <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-16">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div>
+              <div className="text-lg font-bold">Fandekitchen</div>
+              <div className="text-sm text-red-400 mt-1">Fan De Anndy 25 L.L.C.</div>
+              <p className="mt-3 text-sm text-slate-400">
+                Authentic Philippine flavors, freshly baked with a modern twist.
+              </p>
+            </div>
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-3">Contact Us</div>
+              <ul className="space-y-2 text-sm text-slate-300">
+                <li>📞 <a href="tel:2534496728" className="hover:text-red-400">253 449 6728</a></li>
+                <li>✉️ <a href="mailto:fandekitchen@fandelicious.shop" className="hover:text-red-400">fandekitchen@fandelicious.shop</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-3">Location</div>
+              <p className="text-sm text-slate-300">
+                2500 SW 336th St Ste A<br />
+                Federal Way, WA 98023-3800
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
+            © {new Date().getFullYear()} Fan De Anndy 25 L.L.C. dba Fandekitchen. All rights reserved.
+          </div>
+        </div>
+      </footer>
 
       {/* Payment Modal */}
       {showPaymentModal && (
