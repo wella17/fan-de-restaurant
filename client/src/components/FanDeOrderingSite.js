@@ -268,7 +268,7 @@ export default function FanDeOrderingSite() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
           <div className="flex items-center gap-3">
             <img
-              src="/images/fandekitchen-mascot.PNG"
+              src="/images/fandekitchen-mascot-v2.png"
               alt="Fandekitchen mascot"
               className="h-12 w-12 rounded-full object-cover object-top border-2 border-orange-400 shadow-md bg-white"
             />
@@ -351,7 +351,7 @@ export default function FanDeOrderingSite() {
               <div className="absolute h-56 w-56 rounded-full border-4 border-orange-300/40 mascot-ring" />
               {/* Mascot */}
               <img
-                src="/images/fandekitchen-mascot.PNG"
+                src="/images/fandekitchen-mascot-v2.png"
                 alt="Fandekitchen chef mascot"
                 className="mascot-float relative z-10 h-[420px] w-auto object-contain drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 20px 40px rgba(249,115,22,0.3))' }}
@@ -816,7 +816,7 @@ export default function FanDeOrderingSite() {
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <img
-                  src="/images/fandekitchen-mascot.PNG"
+                  src="/images/fandekitchen-mascot-v2.png"
                   alt="Fandekitchen mascot"
                   className="h-14 w-14 rounded-full object-cover object-top border-2 border-orange-400 bg-white"
                 />
