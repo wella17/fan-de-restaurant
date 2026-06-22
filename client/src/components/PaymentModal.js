@@ -98,7 +98,7 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
           </button>
         </div>
 
-        <div className="mb-6 rounded-2xl bg-red-50 p-4">
+        <div className="mb-6 rounded-2xl bg-orange-50 p-4">
           <div className="flex justify-between text-sm text-slate-700">
             <span>Total Amount</span>
             <span className="font-bold">${amount}</span>
@@ -109,7 +109,7 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
         </div>
 
         {error && (
-          <div className="mb-4 rounded-xl bg-red-50 p-3 text-sm text-red-600">
+          <div className="mb-4 rounded-xl bg-orange-50 p-3 text-sm text-orange-500">
             {error}
           </div>
         )}
@@ -119,7 +119,7 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
             <label className="mb-2 block text-sm font-medium text-slate-700">
               Card Information
             </label>
-            <div className="rounded-2xl border border-red-100 p-4">
+            <div className="rounded-2xl border border-orange-100 p-4">
               <CardElement options={cardStyle} />
             </div>
           </div>
@@ -132,14 +132,14 @@ const CheckoutForm = ({ amount, onSuccess, onCancel, customerInfo }) => {
             <button
               type="button"
               onClick={onCancel}
-              className="flex-1 rounded-2xl border border-red-200 px-4 py-3 text-sm font-semibold text-red-700 hover:bg-red-50"
+              className="flex-1 rounded-2xl border border-orange-200 px-4 py-3 text-sm font-semibold text-orange-600 hover:bg-orange-50"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={!stripe || loading}
-              className="flex-1 rounded-2xl bg-red-600 px-4 py-3 text-sm font-semibold text-white hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Processing...' : `Pay $${amount}`}
             </button>

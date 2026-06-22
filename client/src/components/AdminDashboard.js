@@ -54,7 +54,7 @@ const AdminDashboard = () => {
       case 'completed':
         return 'bg-gray-100 text-gray-800';
       case 'cancelled':
-        return 'bg-red-100 text-red-800';
+        return 'bg-orange-100 text-orange-700';
       default:
         return 'bg-gray-100 text-gray-800';
     }
@@ -73,7 +73,7 @@ const AdminDashboard = () => {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-600"></div>
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-500"></div>
           <p className="mt-4 text-gray-600">Loading orders...</p>
         </div>
       </div>
@@ -88,7 +88,7 @@ const AdminDashboard = () => {
             <h1 className="text-3xl font-bold text-gray-900">Fandekitchen Admin Dashboard</h1>
             <a
               href="/"
-              className="rounded-2xl bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700"
+              className="rounded-2xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-600"
             >
               View Store
             </a>
@@ -98,7 +98,7 @@ const AdminDashboard = () => {
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         {error && (
-          <div className="mb-4 rounded-xl bg-red-50 p-4 text-red-600">
+          <div className="mb-4 rounded-xl bg-orange-50 p-4 text-orange-500">
             {error}
           </div>
         )}
@@ -109,7 +109,7 @@ const AdminDashboard = () => {
             onClick={() => setFilter('all')}
             className={`rounded-xl px-4 py-2 text-sm font-medium ${
               filter === 'all'
-                ? 'bg-red-600 text-white'
+                ? 'bg-orange-500 text-white'
                 : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
             }`}
           >
@@ -121,7 +121,7 @@ const AdminDashboard = () => {
               onClick={() => setFilter(status)}
               className={`rounded-xl px-4 py-2 text-sm font-medium capitalize ${
                 filter === status
-                  ? 'bg-red-600 text-white'
+                  ? 'bg-orange-500 text-white'
                   : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
               }`}
             >

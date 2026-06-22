@@ -262,9 +262,9 @@ export default function FanDeOrderingSite() {
   ];
 
   return (
-    <div className="min-h-screen bg-red-100/60 text-slate-900">
+    <div className="min-h-screen bg-orange-100/60 text-slate-900">
       {/* Header */}
-      <header className="sticky top-0 z-30 border-b border-red-100 bg-red-100/90 backdrop-blur">
+      <header className="sticky top-0 z-30 border-b border-orange-100 bg-orange-100/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
           <div className="flex items-center gap-3">
             <img
@@ -277,13 +277,13 @@ export default function FanDeOrderingSite() {
             </div>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
-            <a href="#menu" className="hover:text-red-600">Menu</a>
-            <a href="#how-it-works" className="hover:text-red-600">How It Works</a>
-            <a href="#pickup" className="hover:text-red-600">Order</a>
+            <a href="#menu" className="hover:text-orange-500">Menu</a>
+            <a href="#how-it-works" className="hover:text-orange-500">How It Works</a>
+            <a href="#pickup" className="hover:text-orange-500">Order</a>
           </nav>
           <button
             onClick={() => document.getElementById('pickup').scrollIntoView({ behavior: 'smooth' })}
-            className="rounded-2xl bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700"
+            className="rounded-2xl bg-orange-500 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-orange-600"
           >
             Order Now
           </button>
@@ -291,18 +291,18 @@ export default function FanDeOrderingSite() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-red-100 via-red-50 to-white">
-        <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-red-200/40 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-rose-100 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-orange-100 via-orange-50 to-white">
+        <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-orange-200/40 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-56 w-56 rounded-full bg-orange-100 blur-3xl" />
 
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 md:px-10 lg:px-16 lg:py-20">
           <div className="flex flex-col justify-center">
-            <span className="mb-4 inline-flex w-fit rounded-full border border-red-200 bg-white px-4 py-1 text-sm font-medium text-red-700 shadow-sm">
+            <span className="mb-4 inline-flex w-fit rounded-full border border-orange-200 bg-white px-4 py-1 text-sm font-medium text-orange-600 shadow-sm">
               Freshly baked • Pickup & Limited Delivery (nearby areas only)
             </span>
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
               Fandekitchen
-              <span className="block text-lg font-medium text-red-600 md:text-xl">
+              <span className="block text-lg font-medium text-orange-500 md:text-xl">
                 FanDe Liciou$
               </span>
             </h1>
@@ -316,29 +316,29 @@ export default function FanDeOrderingSite() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#menu"
-                className="rounded-2xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-200 transition hover:bg-red-700"
+                className="rounded-2xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition hover:bg-orange-600"
               >
                 View Menu
               </a>
               <a
                 href="#pickup"
-                className="rounded-2xl border border-red-200 bg-white px-6 py-3 text-sm font-semibold text-red-700 transition hover:bg-red-200/60"
+                className="rounded-2xl border border-orange-200 bg-white px-6 py-3 text-sm font-semibold text-orange-600 transition hover:bg-orange-200/60"
               >
                 Order Details
               </a>
             </div>
 
             <div className="mt-10 grid grid-cols-3 gap-4 text-center">
-              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-red-100">
-                <div className="text-2xl font-bold text-red-600">Fresh</div>
+              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-orange-100">
+                <div className="text-2xl font-bold text-orange-500">Fresh</div>
                 <div className="text-sm text-slate-500">Daily bakery feel</div>
               </div>
-              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-red-100">
-                <div className="text-2xl font-bold text-red-600">Easy</div>
+              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-orange-100">
+                <div className="text-2xl font-bold text-orange-500">Easy</div>
                 <div className="text-sm text-slate-500">Simple ordering</div>
               </div>
-              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-red-100">
-                <div className="text-2xl font-bold text-red-600">Nearby</div>
+              <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-orange-100">
+                <div className="text-2xl font-bold text-orange-500">Nearby</div>
                 <div className="text-sm text-slate-500">Limited delivery</div>
               </div>
             </div>
@@ -369,20 +369,20 @@ export default function FanDeOrderingSite() {
       <section id="menu" className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
         <div className="mb-10 flex items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
               Menu Preview
             </p>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
               Best sellers and bundles
             </h2>
           </div>
-          <button className="rounded-xl border border-red-200 px-4 py-2 text-sm font-medium text-red-700 hover:bg-red-200/60">
+          <button className="rounded-xl border border-orange-200 px-4 py-2 text-sm font-medium text-orange-600 hover:bg-orange-200/60">
             See Full Menu
           </button>
         </div>
 
         {error && (
-          <div className="mb-6 rounded-2xl bg-red-50 border border-red-200 p-4 text-red-700">
+          <div className="mb-6 rounded-2xl bg-orange-50 border border-orange-200 p-4 text-orange-600">
             {error}
           </div>
         )}
@@ -393,21 +393,21 @@ export default function FanDeOrderingSite() {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="group overflow-hidden rounded-[2rem] bg-white/95 shadow-lg shadow-red-200/40 ring-1 ring-red-200 transition hover:-translate-y-1"
+                className="group overflow-hidden rounded-[2rem] bg-white/95 shadow-lg shadow-orange-200/40 ring-1 ring-orange-200 transition hover:-translate-y-1"
               >
                 <img src={product.image} alt={product.name} className="h-64 w-full object-cover" />
                 <div className="p-6">
                   <div className="mb-5 flex items-start justify-between gap-3">
-                    <span className="rounded-full bg-red-100/60 px-3 py-1 text-xs font-semibold text-red-700">
+                    <span className="rounded-full bg-orange-100/60 px-3 py-1 text-xs font-semibold text-orange-600">
                       {product.tag}
                     </span>
-                    <span className="text-lg font-bold text-red-600">${product.price}</span>
+                    <span className="text-lg font-bold text-orange-500">${product.price}</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-900">{product.name}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p>
                   <button
                     onClick={() => addToCart(product)}
-                    className="mt-6 w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-red-600"
+                    className="mt-6 w-full rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-orange-500"
                   >
                     Add to cart
                   </button>
@@ -418,12 +418,12 @@ export default function FanDeOrderingSite() {
 
           {/* Order Sidebar */}
           <aside
-            className="h-fit rounded-[2rem] bg-white/95 p-6 shadow-lg shadow-red-200/40 ring-1 ring-red-200 lg:sticky lg:top-24"
+            className="h-fit rounded-[2rem] bg-white/95 p-6 shadow-lg shadow-orange-200/40 ring-1 ring-orange-200 lg:sticky lg:top-24"
             id="pickup"
           >
             <div className="mb-4 flex items-center justify-between">
               <h3 className="text-xl font-bold text-slate-900">Your Order</h3>
-              <span className="rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700">
+              <span className="rounded-full bg-orange-50 px-3 py-1 text-xs font-semibold text-orange-600">
                 Pickup & Delivery
               </span>
             </div>
@@ -437,8 +437,8 @@ export default function FanDeOrderingSite() {
                   onClick={() => setOrderType("pickup")}
                   className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
                     orderType === "pickup"
-                      ? "bg-red-600 text-white"
-                      : "bg-red-50 text-red-700 hover:bg-red-100"
+                      ? "bg-orange-500 text-white"
+                      : "bg-orange-50 text-orange-600 hover:bg-orange-100"
                   }`}
                 >
                   Pickup
@@ -448,8 +448,8 @@ export default function FanDeOrderingSite() {
                   onClick={() => setOrderType("delivery")}
                   className={`rounded-xl px-3 py-2 text-sm font-semibold transition ${
                     orderType === "delivery"
-                      ? "bg-red-600 text-white"
-                      : "bg-red-50 text-red-700 hover:bg-red-100"
+                      ? "bg-orange-500 text-white"
+                      : "bg-orange-50 text-orange-600 hover:bg-orange-100"
                   }`}
                 >
                   Delivery
@@ -465,13 +465,13 @@ export default function FanDeOrderingSite() {
                   value={zip}
                   onChange={(e) => setZip(e.target.value)}
                   placeholder="e.g. 98105"
-                  className="mb-4 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm outline-none focus:border-red-300"
+                  className="mb-4 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm outline-none focus:border-orange-300"
                 />
 
                 {zip && (
                   <div
                     className={`mb-4 rounded-xl p-3 text-sm ${
-                      isEligible ? "bg-green-50 text-green-700" : "bg-red-50 text-red-600"
+                      isEligible ? "bg-green-50 text-green-700" : "bg-orange-50 text-orange-500"
                     }`}
                   >
                     {isEligible
@@ -489,7 +489,7 @@ export default function FanDeOrderingSite() {
             <select
               value={pickup}
               onChange={(e) => setPickup(e.target.value)}
-              className="mb-5 w-full rounded-2xl border border-red-100 bg-white px-4 py-3 text-sm outline-none focus:border-red-300"
+              className="mb-5 w-full rounded-2xl border border-orange-100 bg-white px-4 py-3 text-sm outline-none focus:border-orange-300"
             >
               <option>Today • 4:00 PM</option>
               <option>Today • 6:00 PM</option>
@@ -500,18 +500,18 @@ export default function FanDeOrderingSite() {
             {/* Cart Items */}
             <div className="space-y-3">
               {cart.length === 0 ? (
-                <div className="rounded-2xl bg-red-50 p-4 text-sm text-slate-600">
+                <div className="rounded-2xl bg-orange-50 p-4 text-sm text-slate-600">
                   Your cart is empty. Add pastries to start your order.
                 </div>
               ) : (
                 cart.map((item) => (
-                  <div key={item.id} className="rounded-2xl border border-red-100 p-4">
+                  <div key={item.id} className="rounded-2xl border border-orange-100 p-4">
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <div className="font-semibold text-slate-900">{item.name}</div>
                         <div className="text-sm text-slate-500">${item.price} each</div>
                       </div>
-                      <div className="text-right font-semibold text-red-600">
+                      <div className="text-right font-semibold text-orange-500">
                         ${item.price * item.qty}
                       </div>
                     </div>
@@ -519,7 +519,7 @@ export default function FanDeOrderingSite() {
                       <button
                         type="button"
                         onClick={() => changeQty(item.id, -1)}
-                        className="h-8 w-8 rounded-full border border-red-200 text-red-700"
+                        className="h-8 w-8 rounded-full border border-orange-200 text-orange-600"
                       >
                         −
                       </button>
@@ -527,7 +527,7 @@ export default function FanDeOrderingSite() {
                       <button
                         type="button"
                         onClick={() => changeQty(item.id, 1)}
-                        className="h-8 w-8 rounded-full border border-red-200 text-red-700"
+                        className="h-8 w-8 rounded-full border border-orange-200 text-orange-600"
                       >
                         +
                       </button>
@@ -538,7 +538,7 @@ export default function FanDeOrderingSite() {
             </div>
 
             {/* Order Total */}
-            <div className="mt-6 rounded-2xl bg-red-50 p-4">
+            <div className="mt-6 rounded-2xl bg-orange-50 p-4">
               <div className="flex justify-between text-sm text-slate-700">
                 <span>Subtotal</span>
                 <span>${subtotal}</span>
@@ -549,7 +549,7 @@ export default function FanDeOrderingSite() {
                   <span>${deliveryFee}</span>
                 </div>
               )}
-              <div className="mt-3 flex justify-between border-t border-red-100 pt-3 font-bold text-slate-900">
+              <div className="mt-3 flex justify-between border-t border-orange-100 pt-3 font-bold text-slate-900">
                 <span>Total</span>
                 <span>${total}</span>
               </div>
@@ -565,7 +565,7 @@ export default function FanDeOrderingSite() {
                   placeholder="Street Address *"
                   value={customerInfo.address}
                   onChange={(e) => handleCustomerInfoChange('address', e.target.value)}
-                  className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                  className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
                 />
 
                 <input
@@ -573,7 +573,7 @@ export default function FanDeOrderingSite() {
                   placeholder="Apartment, Suite, Unit (optional)"
                   value={customerInfo.apartment}
                   onChange={(e) => handleCustomerInfoChange('apartment', e.target.value)}
-                  className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                  className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
                 />
 
                 <div className="grid grid-cols-2 gap-3">
@@ -582,14 +582,14 @@ export default function FanDeOrderingSite() {
                     placeholder="City *"
                     value={customerInfo.city}
                     onChange={(e) => handleCustomerInfoChange('city', e.target.value)}
-                    className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                    className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
                   />
                   <input
                     type="text"
                     placeholder="State *"
                     value={customerInfo.state}
                     onChange={(e) => handleCustomerInfoChange('state', e.target.value)}
-                    className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                    className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
                   />
                 </div>
 
@@ -597,7 +597,7 @@ export default function FanDeOrderingSite() {
                   placeholder="Delivery instructions (gate code, landmark, etc.)"
                   value={customerInfo.deliveryInstructions}
                   onChange={(e) => handleCustomerInfoChange('deliveryInstructions', e.target.value)}
-                  className="mb-4 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                  className="mb-4 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
                 />
               </div>
             )}
@@ -611,8 +611,8 @@ export default function FanDeOrderingSite() {
                   onClick={() => setPaymentMethod("cash")}
                   className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${
                     paymentMethod === "cash"
-                      ? "border-red-600 bg-red-600 text-white"
-                      : "border-red-100 bg-white text-slate-700 hover:bg-red-50"
+                      ? "border-orange-500 bg-orange-500 text-white"
+                      : "border-orange-100 bg-white text-slate-700 hover:bg-orange-50"
                   }`}
                 >
                   Pay with Cash on Pickup
@@ -622,8 +622,8 @@ export default function FanDeOrderingSite() {
                   onClick={() => setPaymentMethod("zelle")}
                   className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${
                     paymentMethod === "zelle"
-                      ? "border-red-600 bg-red-600 text-white"
-                      : "border-red-100 bg-white text-slate-700 hover:bg-red-50"
+                      ? "border-orange-500 bg-orange-500 text-white"
+                      : "border-orange-100 bg-white text-slate-700 hover:bg-orange-50"
                   }`}
                 >
                   Pay with Zelle
@@ -633,8 +633,8 @@ export default function FanDeOrderingSite() {
                   onClick={() => setPaymentMethod("stripe")}
                   className={`rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition ${
                     paymentMethod === "stripe"
-                      ? "border-red-600 bg-red-600 text-white"
-                      : "border-red-100 bg-white text-slate-700 hover:bg-red-50"
+                      ? "border-orange-500 bg-orange-500 text-white"
+                      : "border-orange-100 bg-white text-slate-700 hover:bg-orange-50"
                   }`}
                 >
                   Pay with Credit Card
@@ -649,7 +649,7 @@ export default function FanDeOrderingSite() {
                 placeholder="Full Name *"
                 value={customerInfo.fullName}
                 onChange={(e) => handleCustomerInfoChange('fullName', e.target.value)}
-                className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
               />
 
               <input
@@ -657,7 +657,7 @@ export default function FanDeOrderingSite() {
                 placeholder="Phone Number *"
                 value={customerInfo.phone}
                 onChange={(e) => handleCustomerInfoChange('phone', e.target.value)}
-                className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
               />
 
               <input
@@ -665,14 +665,14 @@ export default function FanDeOrderingSite() {
                 placeholder="Email Address *"
                 value={customerInfo.email}
                 onChange={(e) => handleCustomerInfoChange('email', e.target.value)}
-                className="mb-3 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                className="mb-3 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
               />
 
               <textarea
                 placeholder="Order notes (optional)"
                 value={customerInfo.orderNotes}
                 onChange={(e) => handleCustomerInfoChange('orderNotes', e.target.value)}
-                className="mb-4 w-full rounded-2xl border border-red-100 px-4 py-3 text-sm"
+                className="mb-4 w-full rounded-2xl border border-orange-100 px-4 py-3 text-sm"
               />
             </div>
 
@@ -680,14 +680,14 @@ export default function FanDeOrderingSite() {
             <button
               onClick={() => setShowConfirmation(true)}
               disabled={loading || cart.length === 0}
-              className="mt-2 w-full rounded-2xl bg-red-600 px-4 py-3 text-sm font-semibold text-white hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="mt-2 w-full rounded-2xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Processing...' : 'Continue to Checkout'}
             </button>
 
             {/* Order Confirmation */}
             {showConfirmation && cart.length > 0 && (
-              <div className="mt-6 rounded-2xl border border-red-200 bg-white p-5">
+              <div className="mt-6 rounded-2xl border border-orange-200 bg-white p-5">
                 <h3 className="mb-3 text-lg font-bold text-slate-900">Order Summary</h3>
 
                 <div className="mb-3 space-y-1 text-sm text-slate-700">
@@ -730,7 +730,7 @@ export default function FanDeOrderingSite() {
 
             {/* Placed Orders */}
             {placedOrders.length > 0 && (
-              <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4">
+              <div className="mt-6 rounded-2xl border border-orange-200 bg-orange-50 p-4">
                 <h4 className="mb-3 text-sm font-semibold text-slate-900">Recent Orders</h4>
                 <div className="space-y-3">
                   {placedOrders.slice(0, 3).map((order) => (
@@ -750,10 +750,10 @@ export default function FanDeOrderingSite() {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-red-100/60" id="how-it-works">
+      <section className="bg-orange-100/60" id="how-it-works">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-2 md:px-10 lg:px-16">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">
               How it works
             </p>
             <h2 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">
@@ -769,9 +769,9 @@ export default function FanDeOrderingSite() {
             {pickupSteps.map((step, index) => (
               <div
                 key={step}
-                className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-red-100"
+                className="flex items-start gap-4 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-orange-100"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-red-600 text-sm font-bold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
                   {index + 1}
                 </div>
                 <p className="pt-2 text-slate-700">{step}</p>
@@ -786,7 +786,7 @@ export default function FanDeOrderingSite() {
         <div className="rounded-[2rem] bg-slate-900 px-8 py-10 text-white shadow-2xl">
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-300">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-300">
                 Fandekitchen • FanDe Liciou$
               </p>
               <h2 className="mt-2 text-3xl font-bold">Fresh pastries worth sharing</h2>
@@ -797,7 +797,7 @@ export default function FanDeOrderingSite() {
             <div className="flex flex-wrap gap-4 md:justify-end">
               <button
                 onClick={() => document.getElementById('menu').scrollIntoView({ behavior: 'smooth' })}
-                className="rounded-2xl bg-red-600 px-6 py-3 text-sm font-semibold text-white hover:bg-red-500"
+                className="rounded-2xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-400"
               >
                 Order Now
               </button>
@@ -831,8 +831,8 @@ export default function FanDeOrderingSite() {
             <div>
               <div className="text-sm font-semibold uppercase tracking-widest text-slate-400 mb-3">Contact Us</div>
               <ul className="space-y-2 text-sm text-slate-300">
-                <li>📞 <a href="tel:2534496728" className="hover:text-red-400">253 449 6728</a></li>
-                <li>✉️ <a href="mailto:fandekitchen@fandelicious.shop" className="hover:text-red-400">fandekitchen@fandelicious.shop</a></li>
+                <li>📞 <a href="tel:2534496728" className="hover:text-orange-400">253 449 6728</a></li>
+                <li>✉️ <a href="mailto:fandekitchen@fandelicious.shop" className="hover:text-orange-400">fandekitchen@fandelicious.shop</a></li>
               </ul>
             </div>
             <div>
