@@ -1,4 +1,31 @@
 /* Tailwind CSS will handle most styling */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-1deg); }
+  50% { transform: translateY(-18px) rotate(1deg); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+  50% { box-shadow: 0 0 0 20px rgba(249, 115, 22, 0); }
+}
+
+.mascot-float {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.mascot-entrance {
+  animation: fadeSlideIn 0.8s ease-out forwards;
+}
+
+.mascot-ring {
+  animation: pulse-ring 3s ease-in-out infinite;
+}
 .App {
   margin: 0;
   padding: 0;

@@ -266,9 +266,16 @@ export default function FanDeOrderingSite() {
       {/* Header */}
       <header className="sticky top-0 z-30 border-b border-red-100 bg-red-100/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10 lg:px-16">
-          <div>
-            <div className="text-lg font-bold tracking-wide text-slate-900">Fandekitchen</div>
-            <div className="text-xs font-medium text-red-600">Fan De Anndy 25 L.L.C.</div>
+          <div className="flex items-center gap-3">
+            <img
+              src="/images/fandekitchen-mascot.PNG"
+              alt="Fandekitchen mascot"
+              className="h-12 w-12 rounded-full object-cover object-top border-2 border-orange-400 shadow-md bg-white"
+            />
+            <div>
+              <div className="text-lg font-bold tracking-wide text-slate-900">Fandekitchen</div>
+              <div className="text-xs font-medium text-orange-500">Fan De Anndy 25 L.L.C.</div>
+            </div>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
             <a href="#menu" className="hover:text-red-600">Menu</a>
@@ -338,22 +345,22 @@ export default function FanDeOrderingSite() {
             </div>
           </div>
 
-          <div className="self-center">
-            <div className="overflow-hidden rounded-[2rem] bg-white/95 p-4 shadow-2xl ring-1 ring-red-200">
-              <div className="relative overflow-hidden rounded-[1.5rem]">
-                <img
-                  src={empandaImage}
-                  alt="Featured empanada"
-                  className="h-[420px] w-full object-cover"
-                />
-                <div className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-semibold text-red-600 shadow">
-                  Featured Today
-                </div>
-                <div className="absolute bottom-4 left-4 rounded-2xl bg-slate-900/80 px-4 py-3 text-white backdrop-blur">
-                  <div className="text-sm text-red-300">Hot & Fresh</div>
-                  <div className="text-lg font-bold">Empanda Assortment</div>
-                </div>
-              </div>
+          <div className="self-center flex flex-col items-center mascot-entrance">
+            <div className="relative flex items-center justify-center">
+              {/* Decorative orange glow circle */}
+              <div className="absolute h-72 w-72 rounded-full bg-orange-400/20 blur-2xl" />
+              <div className="absolute h-56 w-56 rounded-full border-4 border-orange-300/40 mascot-ring" />
+              {/* Mascot */}
+              <img
+                src="/images/fandekitchen-mascot.PNG"
+                alt="Fandekitchen chef mascot"
+                className="mascot-float relative z-10 h-[420px] w-auto object-contain drop-shadow-2xl"
+                style={{ filter: 'drop-shadow(0 20px 40px rgba(249,115,22,0.3))' }}
+              />
+            </div>
+            {/* Name tag below mascot */}
+            <div className="mt-4 rounded-2xl bg-orange-500 px-6 py-2 text-white font-bold text-lg shadow-lg shadow-orange-200 tracking-wide">
+              Fan De Liciou$
             </div>
           </div>
         </div>
@@ -808,8 +815,17 @@ export default function FanDeOrderingSite() {
         <div className="mx-auto max-w-7xl px-6 py-10 md:px-10 lg:px-16">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
-              <div className="text-lg font-bold">Fandekitchen</div>
-              <div className="text-sm text-red-400 mt-1">Fan De Anndy 25 L.L.C.</div>
+              <div className="flex items-center gap-3 mb-2">
+                <img
+                  src="/images/fandekitchen-mascot.PNG"
+                  alt="Fandekitchen mascot"
+                  className="h-14 w-14 rounded-full object-cover object-top border-2 border-orange-400 bg-white"
+                />
+                <div>
+                  <div className="text-lg font-bold">Fandekitchen</div>
+                  <div className="text-sm text-orange-400">Fan De Anndy 25 L.L.C.</div>
+                </div>
+              </div>
               <p className="mt-3 text-sm text-slate-400">
                 Authentic Philippine flavors, freshly baked with a modern twist.
               </p>
