@@ -274,7 +274,7 @@ export default function FanDeOrderingSite() {
             />
             <div>
               <div className="text-lg font-bold tracking-wide text-slate-900">Fandekitchen</div>
-              <div className="text-xs font-medium text-orange-500">Fan De Anndy 25 L.L.C.</div>
+              <div className="text-xs font-medium text-orange-500">FanDe Anndy 25 L.L.C.</div>
             </div>
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-slate-600 md:flex">
@@ -304,7 +304,7 @@ export default function FanDeOrderingSite() {
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
               Fandekitchen
               <span className="block text-lg font-medium text-red-600 md:text-xl">
-                Fan De Liciou$
+                FanDe Liciou$
               </span>
             </h1>
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
@@ -360,7 +360,7 @@ export default function FanDeOrderingSite() {
             </div>
             {/* Name tag below mascot */}
             <div className="mt-4 rounded-2xl bg-orange-500 px-6 py-2 text-white font-bold text-lg shadow-lg shadow-orange-200 tracking-wide">
-              Fan De Liciou$
+              FanDe Liciou$
             </div>
           </div>
         </div>
@@ -788,7 +788,7 @@ export default function FanDeOrderingSite() {
           <div className="grid gap-6 md:grid-cols-2 md:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-300">
-                Fandekitchen • Fan De Liciou$
+                Fandekitchen • FanDe Liciou$
               </p>
               <h2 className="mt-2 text-3xl font-bold">Fresh pastries worth sharing</h2>
               <p className="mt-4 max-w-xl text-slate-300">
@@ -823,7 +823,7 @@ export default function FanDeOrderingSite() {
                 />
                 <div>
                   <div className="text-lg font-bold">Fandekitchen</div>
-                  <div className="text-sm text-orange-400">Fan De Anndy 25 L.L.C.</div>
+                  <div className="text-sm text-orange-400">FanDe Anndy 25 L.L.C.</div>
                 </div>
               </div>
               <p className="mt-3 text-sm text-slate-400">
@@ -846,7 +846,7 @@ export default function FanDeOrderingSite() {
             </div>
           </div>
           <div className="mt-8 border-t border-slate-700 pt-6 text-center text-xs text-slate-500">
-            © {new Date().getFullYear()} Fan De Anndy 25 L.L.C. dba Fandekitchen. All rights reserved.
+            © {new Date().getFullYear()} FanDe Anndy 25 L.L.C. dba Fandekitchen. All rights reserved.
           </div>
         </div>
       </footer>
