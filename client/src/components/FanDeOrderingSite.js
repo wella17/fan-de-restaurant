@@ -55,6 +55,14 @@ export default function FanDeOrderingSite() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // Order history lookup
+  const [lookupTab, setLookupTab] = useState('email');
+  const [lookupQuery, setLookupQuery] = useState('');
+  const [lookupResults, setLookupResults] = useState([]);
+  const [lookupLoading, setLookupLoading] = useState(false);
+  const [lookupError, setLookupError] = useState('');
+  const [lookupSearched, setLookupSearched] = useState(false);
+
   // Customer information
   const [customerInfo, setCustomerInfo] = useState({
     fullName: '',
@@ -254,6 +262,36 @@ export default function FanDeOrderingSite() {
 
   const total = subtotal + deliveryFee;
 
+  const handleOrderLookup = async () => {
+    if (!lookupQuery.trim()) {
+      setLookupError('Please enter a value to search.');
+      return;
+    }
+    setLookupLoading(true);
+    setLookupError('');
+    setLookupResults([]);
+    setLookupSearched(true);
+    try {
+      const params = { [lookupTab]: lookupQuery.trim() };
+      const response = await ordersAPI.lookupOrders(params);
+      setLookupResults(response.data);
+      if (response.data.length === 0) setLookupError('No orders found. Please check your information and try again.');
+    } catch (err) {
+      setLookupError(err.response?.data?.error || 'Something went wrong. Please try again.');
+    } finally {
+      setLookupLoading(false);
+    }
+  };
+
+  const statusConfig = {
+    pending_payment: { label: 'Pending Payment', color: 'bg-yellow-100 text-yellow-700' },
+    confirmed: { label: 'Confirmed', color: 'bg-blue-100 text-blue-700' },
+    preparing: { label: 'Preparing', color: 'bg-orange-100 text-orange-700' },
+    ready: { label: 'Ready for Pickup', color: 'bg-green-100 text-green-700' },
+    completed: { label: 'Completed', color: 'bg-slate-100 text-slate-600' },
+    cancelled: { label: 'Cancelled', color: 'bg-red-100 text-red-600' },
+  };
+
   const pickupSteps = [
     "Choose your favorite Fandekitchen pastries",
     "Add items to your cart",
@@ -280,6 +318,7 @@ export default function FanDeOrderingSite() {
             <a href="#menu" className="hover:text-orange-500">Menu</a>
             <a href="#how-it-works" className="hover:text-orange-500">How It Works</a>
             <a href="#pickup" className="hover:text-orange-500">Order</a>
+            <a href="#order-history" className="hover:text-orange-500">Order History</a>
           </nav>
           <button
             onClick={() => document.getElementById('pickup').scrollIntoView({ behavior: 'smooth' })}
@@ -746,6 +785,107 @@ export default function FanDeOrderingSite() {
               </div>
             )}
           </aside>
+        </div>
+      </section>
+
+      {/* Order History Section */}
+      <section id="order-history" className="mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-16">
+        <div className="mb-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-orange-500">Track Your Orders</p>
+          <h2 className="mt-2 text-3xl font-bold text-slate-900 md:text-4xl">Order History</h2>
+          <p className="mt-3 text-slate-600">Look up your past orders using your email, phone number, or order number.</p>
+        </div>
+
+        <div className="rounded-[2rem] bg-white/95 p-6 shadow-lg shadow-orange-200/40 ring-1 ring-orange-200">
+          {/* Lookup Tabs */}
+          <div className="mb-6 flex gap-2">
+            {[
+              { key: 'email', label: 'By Email' },
+              { key: 'phone', label: 'By Phone' },
+              { key: 'orderNumber', label: 'By Order #' },
+            ].map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() => { setLookupTab(key); setLookupQuery(''); setLookupResults([]); setLookupError(''); setLookupSearched(false); }}
+                className={`rounded-xl px-4 py-2 text-sm font-semibold transition ${
+                  lookupTab === key
+                    ? 'bg-orange-500 text-white'
+                    : 'bg-orange-50 text-orange-600 hover:bg-orange-100'
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {/* Search Input */}
+          <div className="flex gap-3">
+            <input
+              type={lookupTab === 'email' ? 'email' : lookupTab === 'phone' ? 'tel' : 'text'}
+              placeholder={
+                lookupTab === 'email' ? 'Enter your email address'
+                : lookupTab === 'phone' ? 'Enter your phone number'
+                : 'Enter order number (e.g. FD123456001)'
+              }
+              value={lookupQuery}
+              onChange={(e) => setLookupQuery(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && handleOrderLookup()}
+              className="flex-1 rounded-2xl border border-orange-100 px-4 py-3 text-sm outline-none focus:border-orange-300"
+            />
+            <button
+              onClick={handleOrderLookup}
+              disabled={lookupLoading}
+              className="rounded-2xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 disabled:opacity-50"
+            >
+              {lookupLoading ? 'Searching...' : 'Search'}
+            </button>
+          </div>
+
+          {/* Error Message */}
+          {lookupError && (
+            <div className="mt-4 rounded-2xl bg-orange-50 border border-orange-200 p-4 text-sm text-orange-600">
+              {lookupError}
+            </div>
+          )}
+
+          {/* Results */}
+          {lookupResults.length > 0 && (
+            <div className="mt-6 space-y-4">
+              <p className="text-sm font-semibold text-slate-700">{lookupResults.length} order{lookupResults.length > 1 ? 's' : ''} found</p>
+              {lookupResults.map((order) => {
+                const status = statusConfig[order.status] || { label: order.status, color: 'bg-slate-100 text-slate-600' };
+                return (
+                  <div key={order._id} className="rounded-2xl border border-orange-100 p-5">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div>
+                        <div className="text-base font-bold text-slate-900">Order #{order.orderNumber}</div>
+                        <div className="mt-1 text-sm text-slate-500">{new Date(order.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</div>
+                      </div>
+                      <span className={`rounded-full px-3 py-1 text-xs font-semibold ${status.color}`}>
+                        {status.label}
+                      </span>
+                    </div>
+
+                    <div className="mt-4 space-y-1">
+                      {order.items.map((item, i) => (
+                        <div key={i} className="flex justify-between text-sm text-slate-700">
+                          <span>{item.name} × {item.qty}</span>
+                          <span>${item.price * item.qty}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-4 flex flex-wrap gap-4 border-t border-orange-50 pt-4 text-sm text-slate-600">
+                      <span><strong>Type:</strong> {order.orderType === 'pickup' ? 'Pickup' : 'Delivery'}</span>
+                      <span><strong>Payment:</strong> {order.paymentMethod === 'cash' ? 'Cash' : order.paymentMethod === 'zelle' ? 'Zelle' : 'Credit Card'}</span>
+                      <span><strong>Time:</strong> {order.pickup}</span>
+                      <span className="ml-auto font-bold text-slate-900">Total: ${order.total}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
 

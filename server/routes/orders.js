@@ -22,6 +22,32 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Lookup orders by email, phone, or order number
+router.get('/lookup', async (req, res) => {
+  try {
+    const { email, phone, orderNumber } = req.query;
+
+    let filter = {};
+    if (orderNumber) {
+      filter.orderNumber = orderNumber.trim().toUpperCase();
+    } else if (email) {
+      filter['customerInfo.email'] = email.toLowerCase().trim();
+    } else if (phone) {
+      const digits = phone.replace(/\D/g, '');
+      if (!digits) return res.status(400).json({ error: 'Invalid phone number' });
+      const phoneRegex = digits.split('').join('\\D*');
+      filter['customerInfo.phone'] = { $regex: phoneRegex };
+    } else {
+      return res.status(400).json({ error: 'Please provide email, phone, or order number' });
+    }
+
+    const orders = await Order.find(filter).sort({ createdAt: -1 }).limit(20);
+    res.json(orders);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Get single order
 router.get('/:id', async (req, res) => {
   try {

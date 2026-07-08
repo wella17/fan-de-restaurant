@@ -21,6 +21,7 @@ export const ordersAPI = {
   getOrders: () => api.get('/orders'),
   getOrder: (id) => api.get(`/orders/${id}`),
   updateOrderStatus: (id, status) => api.patch(`/orders/${id}/status`, { status }),
+  lookupOrders: (params) => api.get('/orders/lookup', { params }),
 };
 
 // Payment API
